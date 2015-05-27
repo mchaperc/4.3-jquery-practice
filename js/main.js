@@ -38,41 +38,56 @@
 		}
 	}
 
-	function displaySpecialChars() {
-		$('.back-tick').text('~');
-	}
-
-	function displayNums() {
-		$('.back-tick').text('`');
-	}
-
-
 	function upperCaseKey(key) {
 		return key.toUpperCase();
 	}
 
-	var specialCharacters = {
-		'`': '~',
-		'1': '!',
-		'2': '@',
-		'3': '#',
-		'4': '$',
-		'5': '%',
-		'6': '^',
-		'7': '&',
-		'8': '*',
-		'9': '(',
-		'0': ')',
-		'-': '_',
-		'=': '+',
-		'[': '{',
-		']': '}',
-		'\\': '|',
-		';': ':',
-		"'": '"',
-		',': '<',
-		'.': '>',
-		'/': '?'
+	function displaySpecialChars() {
+		$('.back-tick').text('~');
+		$('.one').text('!');
+		$('.two').text('@');
+		$('.three').text('#');
+		$('.four').text('$');
+		$('.five').text('%');
+		$('.six').text('^');
+		$('.seven').text('&');
+		$('.eight').text('*');
+		$('.nine').text('(');
+		$('.zero').text(')');
+		$('.minus').text('_');
+		$('.equals').text('+');
+		$('.left-bracket').text('{');
+		$('.right-bracket').text('}');
+		$('.front-slash').text('|');
+		$('.semi-colon').text(':');
+		$('.apostrophe').text('"');
+		$('.comma').text('<');
+		$('.period').text('>');
+		$('.back-slash').text('?');
+	}
+
+	function displayNums() {
+		$('.back-tick').text('`');
+		$('.one').text('1');
+		$('.two').text('2');
+		$('.three').text('3');
+		$('.four').text('4');
+		$('.five').text('5');
+		$('.six').text('6');
+		$('.seven').text('7');
+		$('.eight').text('8');
+		$('.nine').text('9');
+		$('.zero').text('0');
+		$('.minus').text('-');
+		$('.equals').text('=');
+		$('.left-bracket').text('[');
+		$('.right-bracket').text(']');
+		$('.front-slash').text('\\');
+		$('.semi-colon').text(';');
+		$('.apostrophe').text("'");
+		$('.comma').text(',');
+		$('.period').text('.');
+		$('.back-slash').text('/');
 	}
 
 	var functionKeys = {
@@ -92,9 +107,6 @@
 			}
 		},
 		'shift': function() {
-			if(shift === false) {
-				$('span').toggleClass('hidden');
-			}
 			shift = true;
 			reMapChars();
 			$('.letter').addClass('up-case');
